@@ -3,12 +3,21 @@ import gsap from "gsap";
 
 const GsapTo = () => {
 useGSAP(() => {
+  // Apply a transform to the blue box using gsap.to() method
+  // Move the blue box 250 pixels to the right, repeat the animation indefinitely,
+  // reverse the animation every time it completes, rotate the box by 360 degrees,
+  // and animate it over 2 seconds using an elastic easing function.
+  // The animation will be repeated indefinitely, and the box will reverse its
+  // position and rotation every time it completes.
+  // The "elastic" easing function will create a smooth, elastic movement.
+  //it accepts an id and some properties
   gsap.to("#blue-box", 1, {
     x: 250,
     repeat: -1,
     yoyo: true,
-    rotation:350,
-    duration:2
+    rotation:360,
+    duration:2,
+    ease:"elastic"
   });
 },[]);
   return (
